@@ -244,10 +244,11 @@ void FillGameRound(GameData &gameData) {
 }
 
 void StartGame(GameData &gameData) {
-
+     GameData emptyGameData;
     ConsoleBackgroudColor(enColor::Black);
     gameData.rounds = GameRound();
     FillGameRound(gameData);
+    gameData = emptyGameData;
 }
 
 
@@ -282,6 +283,7 @@ void GameLoop() {
         cout << "                               Do you want to play again? Y/N?";
         cin >> again;
         wantToPlay = (bool)WantToPlay(again);
+       
     } while (wantToPlay);
     
 }
