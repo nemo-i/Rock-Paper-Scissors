@@ -28,8 +28,9 @@ int GameRound() {
     return number;
 }
 enum GameChoices {
-    Paper = 1,
-    Rock = 2,
+   
+    Rock = 1,
+    Paper = 2,
     Scissor = 3,
 };
 
@@ -258,8 +259,10 @@ enum GameLoop {
 };
 
 bool WantToPlay(char charcters) {
+
     int number = int(charcters);
-    if (number == 89 || number == 171) {
+
+    if (number == 121 || number == 89) {
         return true;
     }
     else
@@ -268,6 +271,7 @@ bool WantToPlay(char charcters) {
     }
 }
 void GameLoop() {
+    ConsoleBackgroudColor(enColor::Black);
     GameData gameData;
     bool wantToPlay;
     char again;
