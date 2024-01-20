@@ -1,5 +1,4 @@
-// Rock-Paper-Scissors.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
 
 #include <iostream>
 #include <string>
@@ -195,7 +194,6 @@ void PrintRoundResults(GameData gameData,int roundNumber,Winner winner) {
 
 void PrintGameOverHeader() {
     cout << "                               --------------------------------------------------------------------" << endl;
-    cout << "                               ---------------------------+++ Game Over +++------------------------" << endl;
     cout << "                                                          +++ Game Over +++                        " << endl;
     cout << "                               --------------------------------------------------------------------" << endl;
 }
@@ -218,6 +216,8 @@ string FinalWinner(GameData gameData) {
 }
 
 void PrintGameResults(GameData gameData) {
+    PrintGameOverHeader();
+    PrintGameResultHeader();
     cout << "                               Game Rounds           : " << gameData.rounds<<endl;
     cout << "                               Player Win Times      : " << gameData.playerWins << endl;
     cout << "                               Computer Win Times    : " << gameData.computerWins << endl;
@@ -249,23 +249,43 @@ void StartGame(GameData &gameData) {
     FillGameRound(gameData);
 }
 
-enum GameLoop 
-void GameLoop()
+
+
+
+enum GameLoop {
+    Yes = 1,
+    No = 0,
+};
+
+bool WantToPlay(char charcters) {
+    int number = int(charcters);
+    if (number == 89 || number == 171) {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+void GameLoop() {
+    GameData gameData;
+    bool wantToPlay;
+    char again;
+    do
+    {
+        StartGame(gameData);
+        ConsoleBackgroudColor(enColor::Black);
+        cout << "                               Do you want to play again? Y/N?";
+        cin >> again;
+        wantToPlay = (bool)WantToPlay(again);
+    } while (wantToPlay);
+    
+}
 
 int main()
 {
-    GameData gameData;
+   
     srand((unsigned)time(NULL));
-    StartGame(gameData);
+    GameLoop();
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
