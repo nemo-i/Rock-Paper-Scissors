@@ -111,16 +111,16 @@ void ConsoleBackgroudColor(enColor color) {
     switch (color)
     {
     case Red:
-        system("color 4");
+        system("color 4F");
         break;
     case Blue:
-       system("color 1");
+       system("color 1F");
         break ;
     case Green:
-       system("color 2");
+       system("color 2F");
         break;
     default:
-        system("color 0");
+        system("color 0F");
         break;
     }
 }
@@ -187,9 +187,9 @@ string GameChoiceName(GameChoices gameChoice) {
 
 void PrintRoundResults(GameData gameData,int roundNumber,Winner winner) {
     cout << "-------------- Round [" << roundNumber + 1 << "] -------------------" << endl;
-    cout << "Player Choice : " << GameChoiceName(gameData.PlayerChoice) << endl;
+    cout << "Player Choice   : " << GameChoiceName(gameData.PlayerChoice) << endl;
     cout << "Computer Choice : " << GameChoiceName(gameData.ComputerChoice) << endl;
-    cout << "Round Winner : " << WinnerName(winner) << endl;
+    cout << "Round Winner    : " << WinnerName(winner) << endl;
     cout << "--------------------------------------------------------------------" << endl;
 }
 
