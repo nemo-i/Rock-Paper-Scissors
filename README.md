@@ -2,6 +2,11 @@
 # Rock Paper Scissors Game in C++
 
 This repository contains a console-based rock paper scissors game in C++, the first final project for the Algorithms and Problem-Solving Level 2 course by [Programming Advices]. The user plays against the computer, which chooses rock, paper, or scissors randomly. The game follows the standard rules and tracks the score.
+## Preview
+
+
+https://github.com/nemo-i/Rock-Paper-Scissors/assets/133984357/3afbb07f-6522-4e87-bf5f-cffcc5466517
+
 
 ## How to run the game
 
