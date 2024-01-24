@@ -16,7 +16,7 @@ To compile and run the game, follow these steps:
 
 1.  Clone or download this repository to your local machine.
 2.  Open the folder containing the game files in Visual Studio Code.
-3.  Open the main.cpp file, which contains the source code of the game.
+3.  Open the Rock-Paper-Scissors.cpp file, which contains the source code of the game.
 4.  Press Ctrl+Shift+B to run the build task, which will compile the code and generate an executable file.
 5.  Press Ctrl+F5 to run the game without debugging, or F5 to run the game with debugging.
 6.  Enjoy the game and have fun!
